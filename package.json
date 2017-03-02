@@ -1,6 +1,6 @@
 {
   "name": "sw-precache-list",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Like sw-precache but just generates the precache resource list, allowing you to write your own service worker script",
   "main": "sw-precache-list.js",
   "scripts": {
