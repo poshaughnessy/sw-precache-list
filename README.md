@@ -1,6 +1,6 @@
 # sw-precache-list
 
-## Precache and remain in control of the service worker
+**Precaching that keeps you in control of your service worker.**
 
 Want to generate a list of static resources to precache with your service worker?
 
