@@ -15,6 +15,8 @@ _Please note, this tool is in progress and not suitable for production usage yet
 
 ### Command line
 
+You can use globs directly on the command line:
+
 ```
 sw-precache-list images/**/* css/*
 ```
@@ -27,10 +29,12 @@ sw-precache-list 'images/**/*' 'css/*'
 
 ### As part of your build process
 
+_Coming soon..._
+
 ```
 var swPrecacheList = require('sw-precache-list');
 
-swPrecacheList.write(`${rootDir}/precache-list.js`);
+swPrecacheList.write(`${rootDir}/precache-list.js`, ['images/**/*', 'css/*']);
 ```
 
 ## Output
@@ -55,6 +59,15 @@ self.addEventListener('install', function(event) {
 
   event.waitUntil(onInstall(event));
 });
+```
+
+Or even easier, using `sw-toolbox`:
+
+```
+importScripts('lib/sw-toolbox.js');
+importScripts('precache-list.js');
+
+toolbox.precache(precacheList);
 ```
 
 ## How does this compare to [sw-precache](https://github.com/GoogleChrome/sw-precache)?
