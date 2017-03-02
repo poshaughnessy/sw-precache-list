@@ -1,0 +1,25 @@
+{
+  "name": "sw-precache-list",
+  "version": "0.1.0",
+  "description": "Like sw-precache but just generates the precache resource list, allowing you to write your own service worker script",
+  "main": "sw-precache-list.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poshaughnessy/sw-precache-list.git"
+  },
+  "author": "Samsung Internet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/poshaughnessy/sw-precache-list/issues"
+  },
+  "homepage": "https://github.com/poshaughnessy/sw-precache-list#readme",
+  "dependencies": {
+    "colors": "^1.1.2",
+    "glob": "^7.1.1",
+    "multi-glob": "^1.0.1",
+    "yargs": "^6.6.0"
+  }
+}
