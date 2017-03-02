@@ -8,24 +8,19 @@ Want to be able to write your own service worker script?
 
 `sw-precache-list` may be for you...
 
-_Please note, this tool is in progress and not suitable for production usage yet._
+_Please note, this tool is in progress and probably not suitable for production usage yet._
 
 
 ## Example usage
 
 ### Command line
 
-You can use globs directly on the command line:
-
-```
-sw-precache-list images/**/* css/*
-```
-
-You can also pass strings:
-
 ```
 sw-precache-list 'images/**/*' 'css/*'
 ```
+
+NB. If your OS supports globs natively then you could use them directly, e.g. `sw-precache-list images/* css/*`
+ 
 
 ### As part of your build process
 
