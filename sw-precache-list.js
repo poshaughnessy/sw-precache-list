@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 'use strict';
 
 const DEFAULT_OUTPUT_FILENAME = 'precache-list.js';
