@@ -8,7 +8,7 @@ Want to be able to write your own service worker script?
 
 `sw-precache-list` may be for you...
 
-_Please note, this tool is in progress and probably not suitable for production usage yet._
+_Please note, this tool is in progress and probably not suitable for production usage yet!_
 
 
 ## Example usage
@@ -35,8 +35,8 @@ swPrecacheList.write(`${rootDir}/precache-list.js`, ['images/**/*', 'css/*']);
 ## Output
 
 The resulting file (default: `precache-list.js`) will output the resource list to a global variable 
-called `precacheList`. You can use it in your service worker script via `importScripts`. Here is an 
-example:
+called `precacheList`. You can use it in your service worker script via `importScripts`. 
+Here is an example:
 
 ```
 // service-worker.js
@@ -64,6 +64,25 @@ importScripts('precache-list.js');
 
 toolbox.precache(precacheList);
 ```
+
+Because you are in control of what you add to the cache, you can easily include other entries
+too, for example if you want to hardcode some resources from other domains:
+
+```
+var otherResources = [
+  'https://fonts.googleapis.com/css?family=Bungee',
+  'https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js'
+];
+
+return cache.addAll( precacheList )
+  .then(function() { 
+    return cache.addAll( otherResources );
+  });
+```
+
+NB. My colleague Ada is working on a tool that can help you identify your static resources
+across all domains! I'll add a link here when it's ready :)
+
 
 ## How does this compare to [sw-precache](https://github.com/GoogleChrome/sw-precache)?
 
